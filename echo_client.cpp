@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
     }
 
     char message[BUFFER_LEN];
-    //fgets(message, BUFFER_LEN, stdin);
     int str_len = 0;
     int recv_len=0;
     while(1) {
@@ -63,6 +62,8 @@ int main(int argc, char *argv[])
 		message[recv_len]=0;
 		printf("Message from server: %s", message);
     }
+
+    close(client_sock);
 
     return 0;
 }
